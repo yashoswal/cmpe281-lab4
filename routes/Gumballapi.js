@@ -10,7 +10,7 @@ var args = {
 
 exports.listGumballs = function(req, res){
 		
-		restClient.get('http://ashishn-grailsgumballmachinever2.cfapps.io/gumballs.json', function(data, response){
+		restClient.get('http://grailsgumballmachinever2-yash.cfapps.io/gumballs.json', function(data, response){
 
 			var gumballInfo = {};
 			gumballInfo = data;
@@ -54,7 +54,7 @@ exports.handleOrders = function(req, res){
 
 			var postresdata = [];
 
-			restClient.get("http://ashishn-grailsgumballmachinever2.cfapps.io/gumballs.json", function(gbdata, response){
+			restClient.get("http://grailsgumballmachinever2-yash.cfapps.io/gumballs.json", function(gbdata, response){
 
 				var gumballInfo = {};
             	gumballInfo = gbdata;
@@ -69,7 +69,7 @@ exports.handleOrders = function(req, res){
             			  headers:{"Content-Type": "application/json"} 
             			};
 
-            		restClient.put("http://ashishn-grailsgumballmachinever2.cfapps.io/gumballs/1", postargs, function(data,response) {
+            		restClient.put("http://grailsgumballmachinever2-yash.cfapps.io/gumballs/1", postargs, function(data,response) {
             	      // parsed response body as js object
             	    console.log(gbdata);
             	    // raw response

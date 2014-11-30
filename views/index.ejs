@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to the Gumball Machine</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1 align="center">Welcome to the Gumball Machine</h1>
+    <form name="GumballMachine" method="post" action="/api/GumballAction">
+    
+    <p>
+    <div align="center">
+    <textarea name="message" cols="50" rows="15" readonly="true">
+    
+    Model Number : <%=responsemsg[0]%>
+    Serial Number: <%=responsemsg[1]%>
+    State : <%=responsemsg[2]%>
+    Number of Gumballs in the inventory <%=responsemsg[3]%>
+    
+    Message: <%=responsemsg[4]%>
+    </textArea>
+    <input type="hidden" name="modelNumber" value=<%=responsemsg[0]%>></input>
+     <input type="hidden" name="serialNumber" value=<%=responsemsg[1]%>></input>
+    <input type="hidden" name="state" value=<%=responsemsg[2]%>></input>
+    <input type="hidden" name="count" value=<%=responsemsg[3]%>></input>
+    
+    
+    </div>
+    </p>
+    <p align="center">
+    
+    <img src='../images/giant-gumball-machine.jpg' width="385" height="316"  class='' onmouseover='GumballMachine'/>
+    
+    
+    </p>
+    
+    <p align="center">
+    <input type="submit" name="event" value="InsertQuarter"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="submit" name="event" value="TurnTheCrank"/>
+  </body>
+</html>
